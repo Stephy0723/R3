@@ -2,152 +2,225 @@
 <html lang="es">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Formulario de Crédito - Inversiones 3R</title>
-  <link rel="stylesheet" href="FormularioCredito3R.css" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Solicitud de Credito | Inversiones 3R</title>
+  <meta
+    name="description"
+    content="Formulario de solicitud de credito para clientes de Inversiones 3R."
+  />
+  <link rel="icon" href="logo.jpg" type="image/jpeg" />
+  <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
-
-  <div class="form-container">
-    <img src="logo.jpg" alt="Logo Inversiones 3R" class="logo" />
-    <h2>Formulario de Solicitud de Crédito</h2>
-
-    <form method="POST" action="https://inversiones3r.click/procesar.php">
-      <div class="section-title">Datos Personales</div>
-      <div class="form-grid">
-        <div><label>Nombre completo</label><input name="nombre" required /></div>
-        <div><label>Cédula</label><input name="cedula" required /></div>
-        <div><label>Apodo</label><input name="apodo" required /></div>
-        <div>
-          <label>Sexo</label>
-          <select name="sexo" required>
-            <option value="">Seleccione</option>
-            <option value="masculino">Masculino</option>
-            <option value="femenino">Femenino</option>
-            <option value="otro">Otro</option>
-          </select>
-        </div>
-        <div>
-          <label>Edad</label>
-          <select name="edad" required>
-            <option value="">Seleccione</option>
-            <option value="18-25">18-25</option>
-            <option value="26-35">26-35</option>
-            <option value="36-45">36-45</option>
-            <option value="46-60">46-60</option>
-            <option value="60+">60+</option>
-          </select>
-        </div>
-        <div>
-          <label>Ciudad</label>
-          <select name="ciudad" required>
-            <option value="">Seleccione</option>
-            <option value="Azua">Azua</option>
-            <option value="Bahoruco">Bahoruco</option>
-            <option value="Barahona">Barahona</option>
-            <option value="Dajabón">Dajabón</option>
-            <option value="Distrito Nacional">Distrito Nacional</option>
-            <option value="Duarte">Duarte</option>
-            <option value="Elías Piña">Elías Piña</option>
-            <option value="El Seibo">El Seibo</option>
-            <option value="Espaillat">Espaillat</option>
-            <option value="Hato Mayor">Hato Mayor</option>
-            <option value="Hermanas Mirabal">Hermanas Mirabal</option>
-            <option value="Independencia">Independencia</option>
-            <option value="La Altagracia">La Altagracia</option>
-            <option value="La Romana">La Romana</option>
-            <option value="La Vega">La Vega</option>
-            <option value="María Trinidad Sánchez">María Trinidad Sánchez</option>
-            <option value="Monseñor Nouel">Monseñor Nouel</option>
-            <option value="Monte Cristi">Monte Cristi</option>
-            <option value="Monte Plata">Monte Plata</option>
-            <option value="Pedernales">Pedernales</option>
-            <option value="Peravia">Peravia</option>
-            <option value="Puerto Plata">Puerto Plata</option>
-            <option value="Samaná">Samaná</option>
-            <option value="San Cristóbal">San Cristóbal</option>
-            <option value="San José de Ocoa">San José de Ocoa</option>
-            <option value="San Juan">San Juan</option>
-            <option value="San Pedro de Macorís">San Pedro de Macorís</option>
-            <option value="Sánchez Ramírez">Sánchez Ramírez</option>
-            <option value="Santiago">Santiago</option>
-            <option value="Santiago Rodríguez">Santiago Rodríguez</option>
-            <option value="Santo Domingo">Santo Domingo</option>
-            <option value="Valverde">Valverde</option>
-          </select>
-        </div>
-        <div>
-          <label>Estado civil</label>
-          <select name="estado_civil" required>
-            <option value="">Seleccione</option>
-            <option value="soltero">Soltero/a</option>
-            <option value="casado">Casado/a</option>
-            <option value="union libre">Unión libre</option>
-            <option value="divorciado">Divorciado/a</option>
-            <option value="viudo">Viudo/a</option>
-          </select>
-        </div>
-        <div>
-          <label>Tipo de vivienda</label>
-          <select name="vivienda" required>
-            <option value="">Seleccione</option>
-            <option value="propia">Propia</option>
-            <option value="alquilada">Alquilada</option>
-            <option value="familiar">Familiar</option>
-            <option value="otro">Otro</option>
-          </select>
-        </div>
-        <div><label>Dirección</label><input name="direccion" required /></div>
-        <div><label>Casa No.</label><input name="casa" required /></div>
-        <div><label>Sector</label><input name="sector" required /></div>
-        <div><label>Tel. Casa</label><input name="telcasa" required /></div>
-        <div><label>Celular</label><input name="celular" required /></div>
+  <main class="page-shell">
+    <section class="intro" aria-labelledby="form-title">
+      <img src="logo.jpg" alt="Inversiones 3R" class="logo" />
+      <div>
+        <p class="eyebrow">Solicitud en linea</p>
+        <h1 id="form-title">Formulario de Solicitud de Credito</h1>
+        <p class="intro-copy">
+          Completa tus datos con cuidado. Los campos obligatorios ayudan a
+          evaluar tu solicitud con mayor rapidez.
+        </p>
       </div>
+    </section>
 
-      <div class="section-title">Información Laboral</div>
-      <div class="form-grid">
-        <div><label>Empresa</label><input name="empresa" required /></div>
-        <div><label>Cargo</label><input name="cargo" required /></div>
-        <div><label>Dirección de trabajo</label><input name="dirtrabajo" required /></div>
-        <div><label>Teléfono trabajo</label><input name="teltrabajo" required /></div>
-        <div><label>Tiempo en la empresa</label><input name="tiempoempresa" required /></div>
-        <div>
-          <label>Ingresos mensuales</label>
-          <input type="number" name="ingresos" min="10000" step="500" required />
+    <form class="credit-form" method="POST" action="procesar.php">
+      <fieldset>
+        <legend>Datos personales</legend>
+        <div class="form-grid">
+          <label>
+            Nombre completo
+            <input type="text" name="nombre" autocomplete="name" required />
+          </label>
+          <label>
+            Cedula
+            <input
+              type="text"
+              name="cedula"
+              inputmode="numeric"
+              autocomplete="off"
+              placeholder="000-0000000-0"
+              required
+            />
+          </label>
+          <label>
+            Apodo
+            <input type="text" name="apodo" autocomplete="nickname" />
+          </label>
+          <label>
+            Sexo
+            <select name="sexo" required>
+              <option value="">Seleccione</option>
+              <option value="Masculino">Masculino</option>
+              <option value="Femenino">Femenino</option>
+              <option value="Otro">Otro</option>
+            </select>
+          </label>
+          <label>
+            Edad
+            <select name="edad" required>
+              <option value="">Seleccione</option>
+              <option value="18-25">18-25</option>
+              <option value="26-35">26-35</option>
+              <option value="36-45">36-45</option>
+              <option value="46-60">46-60</option>
+              <option value="60+">60+</option>
+            </select>
+          </label>
+          <label>
+            Provincia
+            <select name="ciudad" required>
+              <option value="">Seleccione</option>
+              <option>Azua</option>
+              <option>Bahoruco</option>
+              <option>Barahona</option>
+              <option>Dajabon</option>
+              <option>Distrito Nacional</option>
+              <option>Duarte</option>
+              <option>Elias Pina</option>
+              <option>El Seibo</option>
+              <option>Espaillat</option>
+              <option>Hato Mayor</option>
+              <option>Hermanas Mirabal</option>
+              <option>Independencia</option>
+              <option>La Altagracia</option>
+              <option>La Romana</option>
+              <option>La Vega</option>
+              <option>Maria Trinidad Sanchez</option>
+              <option>Monsenor Nouel</option>
+              <option>Monte Cristi</option>
+              <option>Monte Plata</option>
+              <option>Pedernales</option>
+              <option>Peravia</option>
+              <option>Puerto Plata</option>
+              <option>Samana</option>
+              <option>San Cristobal</option>
+              <option>San Jose de Ocoa</option>
+              <option>San Juan</option>
+              <option>San Pedro de Macoris</option>
+              <option>Sanchez Ramirez</option>
+              <option>Santiago</option>
+              <option>Santiago Rodriguez</option>
+              <option>Santo Domingo</option>
+              <option>Valverde</option>
+            </select>
+          </label>
+          <label>
+            Estado civil
+            <select name="estado_civil" required>
+              <option value="">Seleccione</option>
+              <option value="Soltero/a">Soltero/a</option>
+              <option value="Casado/a">Casado/a</option>
+              <option value="Union libre">Union libre</option>
+              <option value="Divorciado/a">Divorciado/a</option>
+              <option value="Viudo/a">Viudo/a</option>
+            </select>
+          </label>
+          <label>
+            Tipo de vivienda
+            <select name="vivienda" required>
+              <option value="">Seleccione</option>
+              <option value="Propia">Propia</option>
+              <option value="Alquilada">Alquilada</option>
+              <option value="Familiar">Familiar</option>
+              <option value="Otro">Otro</option>
+            </select>
+          </label>
+          <label class="span-2">
+            Direccion
+            <input type="text" name="direccion" autocomplete="street-address" required />
+          </label>
+          <label>
+            Casa No.
+            <input type="text" name="casa" required />
+          </label>
+          <label>
+            Sector
+            <input type="text" name="sector" required />
+          </label>
+          <label>
+            Telefono de casa
+            <input type="tel" name="telcasa" autocomplete="tel" />
+          </label>
+          <label>
+            Celular
+            <input type="tel" name="celular" autocomplete="tel" required />
+          </label>
         </div>
+      </fieldset>
+
+      <fieldset>
+        <legend>Informacion laboral</legend>
+        <div class="form-grid">
+          <label>
+            Empresa
+            <input type="text" name="empresa" required />
+          </label>
+          <label>
+            Cargo
+            <input type="text" name="cargo" required />
+          </label>
+          <label class="span-2">
+            Direccion de trabajo
+            <input type="text" name="dirtrabajo" required />
+          </label>
+          <label>
+            Telefono de trabajo
+            <input type="tel" name="teltrabajo" required />
+          </label>
+          <label>
+            Tiempo en la empresa
+            <input type="text" name="tiempoempresa" placeholder="Ej. 2 anos" required />
+          </label>
+          <label>
+            Ingresos mensuales
+            <input type="number" name="ingresos" min="10000" step="500" required />
+          </label>
+        </div>
+      </fieldset>
+
+      <fieldset>
+        <legend>Referencias personales</legend>
+        <div class="reference-grid">
+          <div class="reference-card">
+            <label>Nombre 1 <input type="text" name="ref1" /></label>
+            <label>Telefono 1 <input type="tel" name="tel1" /></label>
+          </div>
+          <div class="reference-card">
+            <label>Nombre 2 <input type="text" name="ref2" /></label>
+            <label>Telefono 2 <input type="tel" name="tel2" /></label>
+          </div>
+          <div class="reference-card">
+            <label>Nombre 3 <input type="text" name="ref3" /></label>
+            <label>Telefono 3 <input type="tel" name="tel3" /></label>
+          </div>
+        </div>
+      </fieldset>
+
+      <fieldset>
+        <legend>Datos del prestamo</legend>
+        <div class="form-grid">
+          <label>
+            Monto solicitado
+            <input type="number" name="monto" min="10000" step="500" required />
+          </label>
+          <label>
+            Tiempo en meses
+            <input type="number" name="tiempo_prestamo" min="1" max="120" required />
+          </label>
+          <label class="span-2">
+            Observaciones
+            <textarea name="observaciones" rows="4"></textarea>
+          </label>
+        </div>
+      </fieldset>
+
+      <div class="form-actions">
+        <p>Al enviar, confirmas que la informacion suministrada es correcta.</p>
+        <button type="submit">Enviar solicitud</button>
       </div>
-
-      <div class="section-title">Referencias Personales</div>
-      <div class="form-grid">
-        <div>
-          <label>Nombre 1</label><input name="ref1" />
-          <label>Teléfono 1</label><input name="tel1" />
-        </div>
-        <div>
-          <label>Nombre 2</label><input name="ref2" />
-          <label>Teléfono 2</label><input name="tel2" />
-        </div>
-        <div>
-          <label>Nombre 3</label><input name="ref3" />
-          <label>Teléfono 3</label><input name="tel3" />
-        </div>
-      </div>
-
-      <div class="section-title">Datos del Préstamo</div>
-      <div class="form-grid">
-        <div><label>Monto solicitado</label>
-          <input type="number" name="monto" min="10000" step="500" required />
-        </div>
-        <div><label>Tiempo (meses)</label><input type="number" name="tiempo_prestamo" required /></div>
-        <div style="grid-column: span 2;">
-          <label>Observaciones</label>
-          <textarea name="observaciones"></textarea>
-        </div>
-      </div>
-
-      <button type="submit">Enviar Solicitud</button>
     </form>
-  </div>
-
+  </main>
 </body>
 </html>
