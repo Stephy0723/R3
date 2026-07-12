@@ -17,13 +17,19 @@ use PHPMailer\PHPMailer\Exception;
 require __DIR__ . '/vendor/autoload.php';
 
 // Obtener datos del formulario en JSON
-$data = json_decode(file_get_contents("php://input"), true);
+// --- CAMBIO CLAVE AQUÍ: Detectar origen de datos automáticamente ---
+$json = file_get_contents("php://input");
+$data = json_decode($json, true);
+
+// Si no viene como JSON (React), capturamos el $_POST (HTML tradicional)
+if (empty($data)) {
+    $data = $_POST;
+}
 
 if (!$data || !is_array($data)) {
     echo json_encode(["status" => "error", "message" => "Datos inválidos"]);
     exit;
 }
-
 // Armar el mensaje
 $mensaje = "📩 NUEVA SOLICITUD DE CRÉDITO\n";
 $mensaje .= "---------------------------------------\n";
